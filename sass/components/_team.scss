@@ -1,3 +1,13 @@
+.icon-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.icon-set .icon-item {
+    margin-left: 10px;
+    margin-top: 10px;
+}
 .team {
     background-color: $secondary-color;
 }

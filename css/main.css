@@ -60,21 +60,6 @@ img {
   display: block;
 }
 
-.icon-set {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -10px;
-  margin-top: -10px;
-}
-
-.icon-set .icon-item {
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
 svg {
   display: block;
 }
@@ -329,6 +314,21 @@ svg {
 .card-set .item {
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.icon-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+
+.icon-set .icon-item {
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .team {
