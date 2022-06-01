@@ -1,0 +1,75 @@
+.logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $secondary-text-color;
+}
+.logo-black {
+    color: $logo-black;
+}
+.header-pages .link {
+    color: $header-text-color;
+    padding-top: 32px;
+    padding-bottom: 32px;    
+}
+.header-hover {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color $transition-time $cubic;
+}
+.header-pages .link {
+    position: relative;
+}
+.header-hover:hover,
+.header-hover:focus {
+    color: $secondary-text-color;
+}
+.header-pages .active-page {
+    color: $secondary-text-color;
+}
+.header-pages .active-page::after {
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $secondary-text-color;
+}
+.header-pages {
+    display: flex;
+    margin-left: 93px;
+}
+.header-pages .item:not(:last-child) {
+    margin-right: 50px;
+}
+.header-contacts {
+    display: flex;
+    margin-left: auto;
+}
+.header-contacts .item {
+    margin-right: 30px;
+}
+.header-contacts .item:last-child {
+    margin-right: 0;
+}
+.header-container .link {
+    display: block;
+}
+.header-container, .nav {
+    display: flex;
+    align-items: center;    
+}    
+.header {
+    border-bottom: 1px solid $header-border-color;
+}
+.header-contacts .link {
+    display: flex;
+    align-items: center;
+}
+.icon-contacts {
+    margin-right: 10px;
+    fill: currentColor;
+}

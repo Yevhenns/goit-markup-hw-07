@@ -1,0 +1,60 @@
+.service-title {
+    color: $header-text-color;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+.service-description {
+    font-size: 16px;
+    line-height: 1.88;
+}
+.border-card {
+    border: 1px solid $border-color;
+    padding: 20px 24px;
+}
+.service-link {
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow $transition-time $cubic;
+}
+.service-link:hover,
+.service-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);    
+}
+.service-link:hover .thumb,
+.service-link:focus .thumb {
+    transform: translateY(0);
+    
+}
+.service-link:hover .service-thumb-description,
+.service-link:focus .service-thumb-description {
+    transform: scale(1);
+}
+.service-list .item {
+    flex-basis: calc(100% / 3 - 30px);
+}
+.service-thumb {
+    position: relative;
+    overflow: hidden;
+}
+.service-thumb .thumb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: translateY(100%);
+    padding: 63px 24px;
+    background-color: $thumb-background;
+    transition: transform $transition-time $cubic;
+}
+.service-thumb-description {
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $logo-white;
+    transform: scale(2);    
+    transition: transform $transition-time $cubic 50ms;
+}
