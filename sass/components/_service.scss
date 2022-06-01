@@ -17,21 +17,11 @@
     display: flex;
     flex-direction: column;
     transition: box-shadow $transition-time $cubic;
-}
-.service-link:hover,
-.service-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);    
-}
-.service-link:hover .thumb,
-.service-link:focus .thumb {
-    transform: translateY(0);
-    
-}
-.service-link:hover .service-thumb-description,
-.service-link:focus .service-thumb-description {
-    transform: scale(1);
+    &:hover, &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 .service-list .item {
     flex-basis: calc(100% / 3 - 30px);
@@ -39,16 +29,20 @@
 .service-thumb {
     position: relative;
     overflow: hidden;
+    & .thumb {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        transform: translateY(100%);
+        padding: 63px 24px;
+        background-color: $thumb-background;
+        transition: transform $transition-time $cubic;
+    }
 }
-.service-thumb .thumb {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: translateY(100%);
-    padding: 63px 24px;
-    background-color: $thumb-background;
-    transition: transform $transition-time $cubic;
+.service-link:hover .thumb,
+.service-link:focus .thumb {
+    transform: translateY(0);
 }
 .service-thumb-description {
     font-size: 18px;
@@ -57,4 +51,7 @@
     color: $logo-white;
     transform: scale(2);    
     transition: transform $transition-time $cubic 50ms;
+    .service-link:hover &, .service-link:focus & {
+        transform: scale(1);
+    }
 }

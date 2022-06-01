@@ -7,12 +7,13 @@
     visibility: visible;
     background-color: $modal-background;
     transition: opacity $transition-time $cubic, visibility $transition-time $cubic;
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
 }
-.backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
+
 .modal {
     position: absolute;    
     transform: translate(-50%, -50%) scale(1);
@@ -28,9 +29,9 @@
     border-radius: 4px;
     background-color: $logo-white;
     box-shadow: $modal-shadow;
-}
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(1.2);
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
 }
 .close-button {
     position: absolute;
@@ -47,10 +48,9 @@
     background-color: $logo-white;
     fill: $logo-black;
     transition: fill $transition-time $cubic;
-}
-.close-button:hover,
-.close-button:focus {
+    &:hover, &:focus {
     fill: $secondary-text-color;
+}
 }
 .modal-title {
     color: $header-text-color;
@@ -98,10 +98,15 @@
     border-color: $modal-input-border;
     border-radius: 4px;
     padding: 12px 12px 12px 42px;
-}
-.modal-input:hover,
-.modal-input:focus {
-    border-color: $secondary-text-color;
+    &:hover, &:focus {
+        border-color: $secondary-text-color;
+    }
+    &::placeholder {
+        color: $modal-placeholder-color;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+    }
 }
 .modal-icon {
     position: absolute;
@@ -113,12 +118,6 @@
 .modal-input:hover ~ .modal-icon,
 .modal-input:focus ~ .modal-icon {
     fill: $secondary-text-color;
-}
-.modal-input::placeholder {
-    color: $modal-placeholder-color;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
 }
 .input-comment {
     height: 120px;
