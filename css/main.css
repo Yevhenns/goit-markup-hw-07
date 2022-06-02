@@ -50,7 +50,7 @@ svg {
   padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
   color: #212121;
   font-size: 36px;
   line-height: 1.16;
@@ -298,7 +298,7 @@ svg {
   background-size: cover;
 }
 
-.benefits-title {
+.benefits__title {
   color: #212121;
   font-size: 14px;
   line-height: 1.14;
