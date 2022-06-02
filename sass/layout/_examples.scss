@@ -1,4 +1,4 @@
-.examples-list .item {
+.examples-list__item {
     position: relative;
     flex-basis: calc(100% /3 - 30px);
 }
@@ -12,7 +12,7 @@
     align-items: center;
     background-color: $examples-background;
 }
-.examples-title {
+.examples__title {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;

@@ -1,20 +1,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    line-height: 1.71;    
+    line-height: 1.71;
     letter-spacing: 0.03em;
     color: $main-text-color;
 }
-.section-title {
-    color: $header-text-color;
-    font-size: 36px;
-    line-height: 1.16;
-    margin-bottom: 50px;
-    text-align: center;
-}
-.link {    
+.link {
     text-decoration: none;
-    color: inherit;    
+    color: inherit;
 }
 .list {
     list-style: none;
@@ -22,7 +15,7 @@ body {
 .visually-hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */    
+    /* IE6, IE7 */
     padding: 0 !important;
     border: 0 !important;
     height: 1px !important;
@@ -36,19 +29,10 @@ h1, h2, h3, p, ul {
 ul {
     padding-left: 0;
 }
-.container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 svg {
     display: block;

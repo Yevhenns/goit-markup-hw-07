@@ -3,14 +3,14 @@
     font-size: 26px;
     line-height: 1.2;
     color: $secondary-text-color;
+    display: inline-block;
 }
-.logo-black {
+.logo--header {
     color: $logo-black;
 }
-.footer .logo {
-    display: inline-block;
+.footer__logo {
     margin-bottom: 20px;
 }
-.logo-white {
+.logo--footer {
     color: $logo-white;
 }

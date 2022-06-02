@@ -5,56 +5,49 @@ address {
     background-color: $hero-footer-color;
     padding-top: 60px;
     padding-bottom: 60px;
-    & .item:not(:last-child) {
-        margin-bottom: 9px;
-    }
-    & .container {
-        display: flex;
-        align-items: baseline;
-    }
 }
-.footer-contacts[target="_blank"] {
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
+.address-list__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+.address-list__link[target="_blank"] {
     color: $logo-white;
 }
-.footer-contacts {
+.address-list__link {
     color: $footer-contacts-color;
     transition: color $transition-time $cubic;
     &:hover, &:focus {
         color: $secondary-text-color;
     }
 }
-.footer-navigation {
-    display: flex;
-}
-.join  {
+// 
+.join__text, .subscribe__text  {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: $logo-white;
     margin-bottom: 20px;
+    display: inline-block;
 }
-.footer-item:first-child {
+.footer__address {
     margin-right: 70px;
 }    
-.footer-item:nth-child(2) {
+.footer-join {
     width: 206px;
 }
-.footer-item:last-child {
-    margin-left: auto;;
+.footer__subscribe {
+    margin-left: auto;
 }
-.footer-icon-set .link {
+.icon-set__link--footer {
+    fill: $logo-white;
     background-color: $footer-join-icon;
-    fill: $logo-white;
 }
-.footer-icon-set .icon-item {
-    flex-basis: calc(100% / 4 - 10px);
-}
-.subscribe-icon {
-    margin-left: 10px;
-    fill: $logo-white;
-}
-.subscribe-input {
+// 
+.subscribe__input {
     width: 358px;
     height: 50px;
     margin-right: 12px;
@@ -76,6 +69,10 @@ address {
         color: rgba(255, 255, 255, 0.6);
     }
 }
-.footer-item .form {
+.subscribe-form {
     display: flex;
+}
+.subscribe__icon {
+    fill: $logo-white;
+    margin-left: 10px;
 }
