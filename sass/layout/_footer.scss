@@ -1,30 +1,40 @@
-address {
-    font-style: inherit;
-}
 .footer {
     background-color: $hero-footer-color;
     padding-top: 60px;
     padding-bottom: 60px;
-}
-.footer-container {
-    display: flex;
-    align-items: baseline;
-}
-.address-list__item:not(:last-child) {
-    margin-bottom: 9px;
-}
-.address-list__link[target="_blank"] {
-    color: $logo-white;
-}
-.address-list__link {
-    color: $footer-contacts-color;
-    transition: color $transition-time $cubic;
-    &:hover, &:focus {
-        color: $secondary-text-color;
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+    &__address {
+        margin-right: 70px;
+    }
+    &__logo {
+        margin-bottom: 20px;
     }
 }
-// 
-.join__text, .subscribe__text  {
+.address {
+    font-style: inherit;
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    &__link[target="_blank"] {
+        color: $logo-white;
+    }
+    &__link {
+        color: $footer-contacts-color;
+        transition: color $transition-time $cubic;
+        &:hover, &:focus {
+            color: $secondary-text-color;
+        }
+    }
+}
+//
+.footer-join {
+    width: 206px;
+}
+.footer-join__text,
+.footer-subscribe__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -33,46 +43,38 @@ address {
     margin-bottom: 20px;
     display: inline-block;
 }
-.footer__address {
-    margin-right: 70px;
-}    
-.footer-join {
-    width: 206px;
-}
+// 
 .footer__subscribe {
     margin-left: auto;
 }
-.icon-set__link--footer {
-    fill: $logo-white;
-    background-color: $footer-join-icon;
-}
-// 
-.subscribe__input {
-    width: 358px;
-    height: 50px;
-    margin-right: 12px;
+.footer-subscribe {
+    &__input {
+        width: 358px;
+        height: 50px;
+        margin-right: 12px;
+        
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: transparent;
+        padding: 15px 16px;
     
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-    padding: 15px 16px;
-
-    color: $logo-white;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    &::placeholder {
+        color: $logo-white;
         font-size: 16px;
         line-height: 1.25;
         letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: rgba(255, 255, 255, 0.6);
+        }
     }
-}
-.subscribe-form {
-    display: flex;
-}
-.subscribe__icon {
-    fill: $logo-white;
-    margin-left: 10px;
+    &__form {
+        display: flex;
+    }
+    &__icon {
+        fill: $logo-white;
+        margin-left: 10px;
+    }
 }

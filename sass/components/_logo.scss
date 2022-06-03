@@ -4,13 +4,13 @@
     line-height: 1.2;
     color: $secondary-text-color;
     display: inline-block;
-}
-.logo--header {
-    color: $logo-black;
-}
-.footer__logo {
-    margin-bottom: 20px;
-}
-.logo--footer {
-    color: $logo-white;
+    &--header {
+        color: $logo-black;
+    }
+    &__logo {
+        margin-bottom: 20px;
+    }
+    &--footer {
+        color: $logo-white;
+    }
 }
